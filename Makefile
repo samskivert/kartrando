@@ -13,7 +13,7 @@ $(TARGET)_ids.h: $(TARGET).rcp
 	@echo Compiling resources...
 	@pilrc -q -H $(TARGET)_ids.h $(TARGET).rcp
 
-tFRM2702.bin: $(TARGET).rcp
+tFRM2702.bin: $(TARGET).rcp kartrando_icon.bmp
 	@echo Compiling 2 resources...
 	@pilrc -q -H $(TARGET)_ids.h $(TARGET).rcp
 
