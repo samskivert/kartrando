@@ -50,8 +50,8 @@ static ControlPtr buttonPtr_races9;
 static char* racestrs[11];
 static char racedata[11*128];
 
-static UInt players = 2;
-static UInt races = 5;
+UInt players = 2;
+UInt races = 5;
 
 static UInt repeats = 1;
 static UInt extra = 0;

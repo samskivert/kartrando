@@ -1,69 +1,74 @@
+//
+// Kart Rando resource file. Describes the user interface.
+//
+// $Id$
+
 FORM ID fid_kartrando AT ( 0 0 160 160 )
 NOFRAME
 USABLE
 MENUID mid_kartrando
 BEGIN
-    TITLE "Kart Rando"
+  TITLE "Kart Rando"
 
-    LABEL "Players" ID lbid_players AT (6 22) USABLE FONT 0
-    PUSHBUTTON "2" ID pbid_players2 AT (40 PrevTop AUTO AUTO)
-                   USABLE GROUP 1 FONT 0
-    PUSHBUTTON "3" ID pbid_players3
-                   AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
-                   USABLE GROUP 1 FONT 0
-    PUSHBUTTON "4" ID pbid_players4
-                   AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
-                   USABLE GROUP 1 FONT 0
+  LABEL "Players" ID lbid_players AT (6 20) USABLE FONT 0
+  PUSHBUTTON "2" ID pbid_players2 AT (40 PrevTop AUTO AUTO)
+                 USABLE GROUP 1 FONT 0
+  PUSHBUTTON "3" ID pbid_players3
+                 AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
+                 USABLE GROUP 1 FONT 0
+  PUSHBUTTON "4" ID pbid_players4
+                 AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
+                 USABLE GROUP 1 FONT 0
 
-    LABEL "Races" ID lbid_races AT (6 PrevBottom+4) USABLE FONT 0
-    PUSHBUTTON "3" ID pbid_races3 AT (40 PrevTop AUTO AUTO)
-                   USABLE GROUP 2 FONT 0
-    PUSHBUTTON "5" ID pbid_races5
-                   AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
-                   USABLE GROUP 2 FONT 0
-    PUSHBUTTON "7" ID pbid_races7
-                   AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
-                   USABLE GROUP 2 FONT 0
-    PUSHBUTTON "9" ID pbid_races9
-                   AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
-                   USABLE GROUP 2 FONT 0
+  LABEL "Races" ID lbid_races AT (6 PrevBottom+4) USABLE FONT 0
+  PUSHBUTTON "3" ID pbid_races3 AT (40 PrevTop AUTO AUTO)
+                 USABLE GROUP 2 FONT 0
+  PUSHBUTTON "5" ID pbid_races5
+                 AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
+                 USABLE GROUP 2 FONT 0
+  PUSHBUTTON "7" ID pbid_races7
+                 AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
+                 USABLE GROUP 2 FONT 0
+  PUSHBUTTON "9" ID pbid_races9
+                 AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
+                 USABLE GROUP 2 FONT 0
 
-    BUTTON "Rando!" ID bid_rando AT (RIGHT@154 PrevTop AUTO AUTO)
-                    USABLE FRAME FONT 0
+  BUTTON "Rando!" ID bid_rando AT (RIGHT@154 PrevTop AUTO AUTO)
+                  USABLE FRAME FONT 0
 
-    LIST "" ID lid_races AT (6 PrevBottom+4 148 AUTO)
-            USABLE VISIBLEITEMS 9 FONT 0
+  LIST "" ID lid_races AT (6 PrevBottom+6 148 AUTO)
+          USABLE VISIBLEITEMS 9 FONT 0
 END 
 
 FORM ID fid_prefs AT ( 0 0 160 160 )
 MODAL
 USABLE
 BEGIN
-    TITLE "Kart Rando Prefs"
+  TITLE "Kart Rando Prefs"
 
-    CHECKBOX "Allow repeats" ID cbid_repeats AT (6 22 AUTO AUTO) USABLE FONT 0
-    BUTTON "?" ID bid_repeats_help AT (RIGHT@154 PrevTop AUTO AUTO)
-               USABLE FRAME FONT 0
+  CHECKBOX "Allow repeats" ID cbid_repeats AT (6 22 AUTO AUTO) USABLE FONT 0
+  BUTTON "?" ID bid_repeats_help AT (RIGHT@154 PrevTop AUTO AUTO)
+             USABLE FRAME FONT 0
 
-    CHECKBOX "Include Rainbow Road" ID cbid_rainbow
-             AT (6 PrevBottom+4 AUTO AUTO) USABLE FONT 0
-    BUTTON "?" ID bid_rainbow_help AT (RIGHT@154 PrevTop AUTO AUTO)
-               USABLE FRAME FONT 0
+  CHECKBOX "Include Rainbow Road" ID cbid_rainbow
+           AT (6 PrevBottom+4 AUTO AUTO) USABLE FONT 0
+  BUTTON "?" ID bid_rainbow_help AT (RIGHT@154 PrevTop AUTO AUTO)
+             USABLE FRAME FONT 0
 
-    CHECKBOX "Randomize extra" ID cbid_extra
-             AT (6 PrevBottom+4 AUTO AUTO) USABLE FONT 0
-    BUTTON "?" ID bid_extra_help AT (RIGHT@154 PrevTop AUTO AUTO)
-               USABLE FRAME FONT 0
+  CHECKBOX "Randomize extra" ID cbid_extra
+           AT (6 PrevBottom+4 AUTO AUTO) USABLE FONT 0
+  BUTTON "?" ID bid_extra_help AT (RIGHT@154 PrevTop AUTO AUTO)
+             USABLE FRAME FONT 0
 
-    BUTTON "Ok" ID bid_ok AT (RIGHT@154 BOTTOM@154 AUTO AUTO)
-                USABLE FRAME FONT 0
+  BUTTON "Ok" ID bid_ok AT (CENTER BOTTOM@154 AUTO AUTO)
+              USABLE FRAME FONT 0
 END 
 
 MENU ID mid_kartrando
 BEGIN
   PULLDOWN "Kart Rando"
   BEGIN
-    MENUITEM "About" miid_about
+    MENUITEM "About Kart Rando" miid_about
     MENUITEM "Prefs" miid_prefs
   END
 END
@@ -72,7 +77,7 @@ ALERT ID aid_about
 INFORMATION
 BEGIN
   TITLE "About Kart Rando"
-  MESSAGE "A nice little program for picking a random set of tracks and players for Mario Kart 64. Adds spice to the life of people who have played way too much kart.\n\nBy mdb@go2net.com"
+  MESSAGE "A nice little program for picking a random set of tracks and players for Mario Kart 64.\n\nBy mdb@go2net.com\nCirca February 1999\n\nFreely redistributable"
   BUTTONS "Ok"
 END
 
@@ -99,3 +104,5 @@ BEGIN
   MESSAGE "If this is selected, either extra or 150cc will also be chosen for each race. A * will be placed next to the tracks that are extra."
   BUTTONS "Ok"
 END
+
+ICON "kartrando_icon.bmp"
