@@ -10,7 +10,7 @@ MENUID mid_kartrando
 BEGIN
   TITLE "Kart Rando"
 
-  LABEL "Players" ID lbid_players AT (6 20) USABLE FONT 0
+  LABEL "Players" AUTOID AT (6 20) USABLE FONT 0
   PUSHBUTTON "2" ID pbid_players2 AT (40 PrevTop AUTO AUTO)
                  USABLE GROUP 1 FONT 0
   PUSHBUTTON "3" ID pbid_players3
@@ -20,7 +20,7 @@ BEGIN
                  AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
                  USABLE GROUP 1 FONT 0
 
-  LABEL "Races" ID lbid_races AT (6 PrevBottom+4) USABLE FONT 0
+  LABEL "Races" AUTOID AT (6 PrevBottom+4) USABLE FONT 0
   PUSHBUTTON "3" ID pbid_races3 AT (40 PrevTop AUTO AUTO)
                  USABLE GROUP 2 FONT 0
   PUSHBUTTON "5" ID pbid_races5
